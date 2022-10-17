@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box}
+/* Header */
+
+.header{
+	width:100vw;
+	height:15vh;
+	position:fixed;
+	z-index: 100;
+	left: 0%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--black1);
+  padding-top: 5px;
+}
+.nav_wrapper{
+  display:flex;
+}
+.nav-icon, .nav-close, .nav-bgOverlay {
+   display: none;
+}
+/* left side of navbar */
+.navbar-icon {
+	width: 30%;
+	height: auto;
+	min-height: 5vh;
+  padding: 3em 0;
+  /* font-weight: 600; */
+  
+}
+/* Left side icon text */
+.navbar-icon a{
+text-decoration: none;
+color: #F15412;
+text-align:center;
+font-size: 35px;
+}
+/* Right Side  of navbar */
+.nav-bar{
+	width: 70%;
+	min-height: 5vh;
+	padding-top: 1.2em;}
+/* Elements on navbar */
+.navbar-nav {
+	display: flex;
+  margin: 0 1rem;
+ 
+	list-style: none;
+	align-items: center;
+	justify-content: space-around;
+	text-decoration: none;
+	
+}
+
+.nav-item a{ 
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+}
+/* On hover */
+.nav-item a:hover{
+	cursor: pointer;
+	color: #F15412;
+}
+.btn{
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'Poppins';
+  padding: .7em .6em;
+  border-radius: .8em;
+  color: var(--orange1);
+}
+.primary-btn{
+  background-color: var(--orange1);
+  color: var(--white1);
+}
+
+/* Store Info */
+.store_info_wrapper{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 3rem;
+}
+.store_item{
+  padding: 20px 20px;
+  border-radius: .8rem;
+  background-color: var(--white2);
+  color: var(--black1);
+  text-align: center;
+  width: 150px;
+}
+.store_icon{
+  width: 30px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+
+/* Form style */
+
+.form_title{
+  font-size: 1rem;
+  font-weight: 600; 
+}
+.form_wrapper{
+  padding:3rem 0;
+}
+.form_wrapper form{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+.form_wrapper label{
+  font-size: 1rem;
+  /* font-family: 'Poppins'; */
+}
+.form_wrapper input,
+.form_wrapper textarea,
+.form_wrapper select {
+  width: 100%;
+  border: none;
+  background-color: var(--white2);
+  font-size: 1rem;
+  font-family: 'Raleway';
+  padding: 1rem;
+  border-radius: .5rem;
+  
+}
+.form_wrapper textarea{
+  resize: vertical;
+}
+.form_wrapper button{
+  width: max-content;
+  border: none;
+  padding: 1rem 2.5rem;
+  letter-spacing: .1rem;
+  font-size: 1rem;
+  font-weight: 500;
+
+}
+
+/* Footer Section */
+.footer{
+  padding-top: 2em;
+  background-color: var(--black1) ;
+  padding-bottom: 2rem;
+ 
+}
+.footer_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.footer_logo a{
+  color: var(--orange1);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.footer_descrptn p{
+  padding-top: 1.3em;
+   color: var(--white2);
+   font-family: 'Raleway';
+   font-size: .8em
+}
+.social_title h4{
+  padding-top: 1em;
+  color: var(--white1);
+  font-family: 'Raleway';
+  font-size: 1rem;
+  
+}
+.social_icon li{
+  margin: .5em;
+  display: inline-block;
+  padding: .3em .3em;
+  background-color: #dcdcdc;
+  border: 2px solid var(--orange1);
+  border-radius: 10px;
+ 
+}
+.social_icon a{
+  color: var(--black1);
+}
+.footer_text_title h4{
+  margin-bottom: .5em;
+  color: var(--white1);
+  font-family: 'Raleway'
+}
+.footer_text_title a{
+  color: #dcdcdc;
+  font-family: 'Raleway';
+  font-size: .8em;
+}
+.copyright{
+  padding: 1em 0;
+}
+.copyright_text{
+  color: var(--black1);
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/* Media query for Navbar */
+
+@media only screen and (max-width: 768px) {
+
+  .header{
+    position: relative;
+  }
+  .navbar-icon{
+    padding-top: 1rem;
+  }
+  .nav-icon{
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    cursor: pointer;
+  }
+  
+  .nav-icon svg .nav-close svg {
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+  }
+  .nav-close{
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+  .navbar-nav{
+    position: absolute;
+    z-index: 500;
+    left: 100%;
+    display: inline-block;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--orange2);
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    transform: translateX(0%);
+    overflow: hidden;
+    transition: 0.3s  ease-in transform;
+  }
+  .navbar-nav.show{
+    transform: translate(-100%);
+  }
+  .navbar-nav li{
+    top: 10rem;
+    display: block;
+    text-align: right;
+    margin: 3rem 0;
+    
+  }
+  .navbar-nav li a:hover{ 
+    color: var(--black1);
+ }
+ .nav_bgOverlay {
+  position: absolute;
+  left: 0;
+  top: 6em;
+  z-index: 500;
+  height: 100vh;
+  width: 100%;
+  background: rgba(18, 24, 14, 0.808);
+  display: none;
+}
+.nav_bgOverlay.active {
+  display: block;
+}
+}
+
+/* Media Query for Store Info */
+@media only screen and (min-width: 768px){
+  #Store_info{
+    padding-top: 15rem;
+  }
+  .store_info_wrapper{
+   gap: 5rem;
+   align-items: stretch;
+   justify-content: center;
+   
+  }
+  .store_item{
+    min-width: 200px;
+    padding: 40 0px;
+  }
+  .store_icon{
+    width: 47px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Media query for form style */
+
+@media only screen and (min-width:768px){
+
+  .form_title{
+    font-size: 1.5rem;
+  }
+  .form_wrapper{
+    padding:5rem 0;
+  }
+  .form_wrapper form{
+    grid-template-columns: 1fr 1fr;
+  }
+  .group_full{
+    grid-column: 1/3;
+  }
+  .form_wrapper label{
+    font-size: 1.5rem;
+  }
+  .form_wrapper input,
+  .form_wrapper textarea,
+  .form_wrapper select{
+    font-size: 1.5rem;
+    padding: 1.2rem;
+  }
+  .form_wrapper button{
+    font-size: 1.2rem;
+    padding: 1.5rem 4rem;
+  }
+  #form_booking{
+    padding-top: 12rem;
+  }
+
+}
+
+/* Media Query for footer */
+
+@media only screen and (min-width: 768px) {
+  .footer{
+    padding-top: 3rem;
+  }
+  .footer_wrapper{
+    flex-direction: row;
+  }
+  .footer_text_title h4{
+    font-size: 1rem;
+  }
+  .footer_text_title a{
+    font-size: 1em;
+    line-height: 1.8rem;
+  }
+  .copyright{
+    padding: 2em 0;
+  }
+  .copyright_text{
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+

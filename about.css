@@ -1,0 +1,41 @@
+.about_title h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.about_descriptn{
+    font-size: 1rem;
+    color: var(--black2);
+
+}
+#about_1{
+    padding-bottom: 0;
+}
+@media only screen and (min-width:768px){
+    #about_1{
+        padding-top: 15rem;
+    }
+    .our_story, .our_goals{
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    .about_title h2{
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    .about_descriptn{
+        font-size: 1.5rem;
+        color: var(--black2);
+    
+    }
+    #about_1{
+        padding-bottom: 0;
+    }
+
+}

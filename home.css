@@ -1,0 +1,228 @@
+/* hero Section */
+
+.hero_wrapper{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  
+}
+.left_side{
+    max-width: 360px;
+    margin: 0 auto;
+}
+.left_title h4{
+ color: var(--orange1);
+  text-align:center;
+}
+.left_descrptn p{
+  padding-top: 1rem;;
+  color: var(--black3);
+  font-size: 1rem;
+}
+.button_wrapper{
+  padding-top: 2rem;
+  text-align: center;
+}
+.right-image{
+  padding-top: 4rem;
+  max-width: 400px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Our Special Section */
+.ourspecials_wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.ourspecials_left{
+  display: flex;
+  gap: 1rem;
+}
+.ourspecials_left_item{
+  background-color: var(--white2);
+  padding: 1rem;
+  padding-top: 2rem;
+  margin : 0 auto;
+  border-radius: 15px;
+}
+.ourspecials_left_image {
+  border-radius: 8px;
+  align-items: stretch;
+  overflow: hidden;
+  margin-bottom: 1rem; 
+}
+.ourspecials_left_title{
+  font-size: 1em;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--black4);
+}
+.ourspecials_left_price{
+  color: var(--green);
+  font-size: .8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.ourspecials_left_descriptn{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black2);
+}
+.ourspecials_right{
+ padding-top: 20px; 
+}
+.ourspecials_title{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.ourspecials_right p{
+  font-size: 1rem;
+  color: var(--black2);
+  margin-bottom: 1rem;
+}
+.btn .primary-btn{
+  text-align: center;
+}
+
+/* Top Dishes */
+.topdishes_title{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black4);
+}
+.topdishes_wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem
+}
+.topdishes_item{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white2);
+}
+.topdishes_img img{
+  object-fit: cover;
+  border-radius: 1rem;
+ 
+}
+.topdishes_item_title{
+  font-size: .8rem;
+  color: var(--black4);
+  text-align: center;
+  margin-bottom: 1rem ;
+  
+}
+.topdishes_item_price{
+  font-size: .8rem;
+  color: var(--green);
+  text-align: center;
+  margin-bottom:1rem;
+}
+
+/* Media Query for hero section */
+
+@media only screen and (min-width:768px){
+    #main_section{
+      padding-top: 9rem;
+    }
+    .hero_wrapper{
+      padding-top: 8rem;
+      flex-direction: row;
+  
+    }
+    .left_title h4{
+      font-size: 2em;
+      margin-bottom: 1rem;
+      font-family: 'raleway';
+      text-align: left;
+    }
+    .left_descrptn p{
+      margin-bottom: 1rem;;
+      color: var(--black3);
+      font-size: 1rem;
+    }
+    .button_wrapper{
+      text-align: left;
+    }
+    .right-image{
+      max-width: none;
+      width: 90%;
+    }
+  }
+
+  /* Media Query for Our Specials */
+  @media only screen and (min-width:768px){
+    #ourspecials{
+      padding-top:8rem ;
+    }
+    .ourspecials_wrapper{
+      flex-direction: row;
+      gap: 3rem
+    }
+    .ourspecials_left{
+      gap: 2rem;
+    }
+    .ourspecials_left_item{
+      padding: 1.5rem;
+    }
+    .ourspecials_left_title{
+      font-size: 1.5em;
+    }
+    .ourspecials_left_price{
+      font-size: 1rem;
+    }
+    .ourspecials_left_descriptn{
+      font-size: 1.2rem;
+    }
+    .ourspecials_right{
+      padding-top: 180px;
+    }
+    .ourspecials_title{
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .ourspecials_right p{
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+  }
+  @media only screen and (max-width: 320px){
+    .ourspecials_left{
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  /* Media Query For Top Dishes */
+  @media only screen and (min-width: 768px){
+    .topdishes_title{
+      font-size: 1.5rem;
+    }
+    
+    .topdishes_wrapper{
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1rem;
+    }
+    .topdishes_item{
+      flex-direction: row;
+    }
+    .topdishes_item_title{
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .topdishes_item_price{
+      font-size: 1rem;
+    }
+
+  }
